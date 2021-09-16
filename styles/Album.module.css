@@ -1,20 +1,4 @@
 
-.container {
-    
-}
-
-/* ---- ALBUM ----- */
-
-/* .albumGrid { */
-    /* width: 80%; */
-    /* max-width: 800px; */
-    /* display: grid;
-    grid-gap: 6px;
-    grid-template-columns: repeat(auto-fit, 300px );
-    grid-auto-rows: 300px; */
-    /* grid-auto-rows: min-content; */
-  /* } */
-  
   .albumGrid {
     display: flex;
     flex-flow: row wrap;
@@ -25,6 +9,16 @@
     height: 300px; width: 300px;
     position: relative;
     overflow: hidden;
+    background-color: rgb(53, 53, 53);
+
+    transition: 0.3s;
+    transform: scale(1);
+    /* z-index: 5; */
+  }
+  .albumCont:hover{
+    transform: scale(1.05);
+    z-index: 5;
+    box-shadow: 5px 5px 12px rgba(1,50,18,1);
   }
   
     .albumCard {
@@ -43,7 +37,7 @@
       opacity: 0;
       
       /* background: radial-gradient(circle, rgba(4,141,53,0.8) 0%, rgba(2,75,27,0.8) 44%, rgba(1,50,18,0.8) 100%);  */
-      background: radial-gradient(circle, rgba(4,141,53,0.5) 0%, rgba(1,50,18,0.5) 100%); 
+      background: radial-gradient(circle, rgba(4,141,53,0.5) 0%, rgba(1,50,18,1) 100%); 
       /* background: radial-gradient(circle, rgba(36,144,215,0.7195611520975578) 0%, rgba(12,14,95,0.7923902837502188) 100%);  */
       /* background: radial-gradient(circle, rgba(0,181,65,0.7) 0%, rgba(1,39,14,0.7) 100%);  */
       /* background: radial-gradient(circle, rgba(1,50,18,0.8) 0%, rgba(1,87,31,0.8) 69%, rgba(0,181,65,0.8) 100%);  */
@@ -54,11 +48,34 @@
     }
 
     .title {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       text-align: center;
     }
 
+    .artists {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+    }
     .artist {
       font-size: 1.2rem;
     }
+
+    .label {
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+    .date {
+      font-size: 0.8rem;
+    }
     
+    
+/* .albumGrid { */
+    /* width: 80%; */
+    /* max-width: 800px; */
+    /* display: grid;
+    grid-gap: 6px;
+    grid-template-columns: repeat(auto-fit, 300px );
+    grid-auto-rows: 300px; */
+    /* grid-auto-rows: min-content; */
+  /* } */
