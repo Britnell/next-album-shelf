@@ -1,0 +1,51 @@
+
+
+  .hcontainer {
+    position: fixed;
+    width: 140px;
+    margin-left: 10px;
+
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+  }
+
+    .title {
+        margin: 26px 20px;
+        font-size: 1.2rem;
+        
+    }
+
+    .main {
+        margin-left: calc(140px + 20px);
+    }
+    
+    .filter {
+        font-size: 0.8rem;
+        padding: 4px 12px;
+        margin-top: 8px;
+        
+        background-color: var(--spotify-green);
+        border-radius: 16px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .arrow {
+        /* width: 20px; */
+    }
+
+    .search {
+        font-size: 0.8rem;
+        
+        margin-top: 8px;
+        padding: 4px 12px;
+
+        border-radius: 16px;
+        background-color: rgb(80, 80, 80);
+    }
+
+    

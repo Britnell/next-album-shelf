@@ -1,0 +1,26 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Nunito ,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  font-weight: 600;
+  --spotify-black: #191414;
+  --spotify-green: #1DB954;  
+  
+  background-color: var(--spotify-black);
+  color: white;
+  /* z-index: -10; */
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+

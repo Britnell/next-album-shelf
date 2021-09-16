@@ -1,0 +1,40 @@
+
+
+.header {
+    /* width: 100%; */
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.hcontainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+    .filter {
+        font-size: 0.8rem;
+        padding: 4px 12px;
+        margin: 4px 4px;
+        
+        background-color: var(--spotify-green);
+        border-radius: 16px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .label {
+        margin-right: 20px;
+    }
+
+    .search {
+        font-size: 0.8rem;
+        padding: 4px 12px;
+        margin: 4px 20px;
+        border-radius: 16px;
+        background-color: rgb(80, 80, 80);
+    }
