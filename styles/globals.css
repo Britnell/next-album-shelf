@@ -24,3 +24,108 @@ a:hover {
   text-decoration: underline;
 }
 
+
+/*  */
+
+.title {
+  font-size: 1.5rem;
+  margin: 26px 20px;
+}
+
+
+.filter {
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  margin-top: 8px;
+  
+  background-color: var(--spotify-green);
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  font-size: 0.8rem;
+  margin-top: 8px;
+  padding: 4px 12px;
+
+  border-radius: 16px;
+  background-color: rgb(80, 80, 80);
+}
+
+
+
+
+@media screen and (min-width: 800px)
+{
+  /* STANDARD */
+  
+  .container {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .header {
+    width: 180px;
+  }
+
+  .main {
+    flex: 1 0;
+  }
+
+      .hcontainer {
+        position: fixed;
+        width: 140px;
+        margin-left: 10px;
+
+        display: flex;
+        flex-flow: column;
+        align-items: stretch;
+      }
+
+  /* -- */
+}
+
+@media screen and (max-width: 800px)
+{
+  /* MOBILE */
+
+  .container {
+    display: flex;
+    flex-flow: column;
+
+  }
+
+  .header {
+    flex: 1 0 auto;
+    margin-left:  8%;
+    margin-right: 8%;
+  }
+
+  .main {
+    flex: 1 0;
+  }
+
+
+  /*  */
+
+      .hcontainer {
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 30px;
+      }
+      
+      .filter {
+        margin-right: 8px;
+      }
+
+      .filter-label {
+        margin-right: 20px;
+      }
+
+  /* -- */
+}
+

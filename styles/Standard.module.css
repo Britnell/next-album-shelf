@@ -1,5 +1,10 @@
 
-
+    .title {
+        margin: 26px 20px;
+        font-size: 1.2rem;
+        
+    }
+    
   .hcontainer {
     position: fixed;
     width: 140px;
@@ -10,11 +15,6 @@
     align-items: stretch;
   }
 
-    .title {
-        margin: 26px 20px;
-        font-size: 1.2rem;
-        
-    }
 
     .main {
         margin-left: calc(140px + 20px);

@@ -6,7 +6,8 @@
   }
 
   .albumCont {
-    height: 300px; width: 300px;
+    flex: 0 1 auto;
+    /* height: 300px; width: 300px; */
     position: relative;
     overflow: hidden;
     background-color: rgb(53, 53, 53);

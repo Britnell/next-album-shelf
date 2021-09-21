@@ -1,12 +1,10 @@
 import React from 'react'
-
 import Head from 'next/head'
 
-import Mobile from '../lib/mobile'
-import Standard from '../lib/standard'
-
 import fetchAlbumShelf from '../lib/albumdata'
-import useMobile from '../lib/useMobile'
+import Header from '../lib/header'
+import Albums from '../lib/albums'
+import standard from '../styles/Standard.module.css'
 
 // REF --- https://developer.spotify.com/documentation/web-api/reference/#category-albums
 
@@ -23,11 +21,7 @@ export default function App({albums,error}) {
       else
         setState({...state, increasing: !state.increasing })
     }
-    // setState({...state, sorting:  })
   }
-
-
-  const isMobile = useMobile();
 
   return (
     <>
@@ -39,21 +33,28 @@ export default function App({albums,error}) {
         {/* <link rel="preconnect" href="https://fonts.gstatic.com" /> */}
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet" />
       </Head>
+      
+      <div className='title' >My digital album shelf</div>
+      <div className='container'>
+          <Header state={state} setFilter={setFilter} />
+          <main className='main' >
+            <Albums state={state} data={albums} />
+          </main>
 
-      { isMobile && <Mobile   error={error} state={state} setFilter={setFilter} data={albums} /> }
-      {!isMobile && <Standard error={error} state={state} setFilter={setFilter} data={albums} /> }
-
+        </div> 
+      
       <footer>Built with spotify API</footer>
     </>
   )
 }
 
-
-// export async function getServerSideProps(context){
-//   return {  props: { albums: await fetchAlbumShelf() }  }
-// }
-
 export async function getStaticProps(context){
   return {  props: { albums: await fetchAlbumShelf() }  }
 }
 
+// <Standard error={error} state={state} setFilter={setFilter} data={albums} /> 
+
+
+// export async function getServerSideProps(context){
+  // return {  props: { albums: await fetchAlbumShelf() }  }
+// }
